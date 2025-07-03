@@ -127,7 +127,7 @@ h1 {
   100% { transform: translateY(-8px); }
 }
 
-..navi-container {
+.navi-container {
   display: flex;
   justify-content: center;
   align-items: center;
