@@ -148,3 +148,20 @@ h1 {
   pointer-events: none;
   animation: navi-bounce 2.5s infinite alternate ease-in-out;
 }
+
+.creditos {
+  width: 100%;
+  background-color: #000;
+  color: #ccc;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 12px 0;
+  margin-top: 2rem;
+  font-family: 'Cinzel Decorative', serif;
+  opacity: 0.8;
+}
+
+.creditos p {
+  margin: 0;
+  letter-spacing: 1px;
+}
