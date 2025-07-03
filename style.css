@@ -100,3 +100,51 @@ h1 {
     padding: 1rem;
     background-color: #f6f1e7;
 }
+
+.container-resultado {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 65rem;
+  padding: 1rem;
+  background-color: rgba(246, 241, 231, 0.85);
+  border: 2px dashed #bfa76f;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+.navi-img {
+  width: 64px; /* tamanho da Navi */
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+  animation: navi-bounce 2.5s infinite alternate ease-in-out;
+}
+
+/* Pequena animação pra Navi "pulsar" levemente */
+@keyframes navi-bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+..navi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(191, 167, 111, 0.2); /* dourado transparente */
+  padding: 12px;
+  border-radius: 50%; /* deixa arredondado */
+  box-shadow: 0 0 15px 5px rgba(191, 167, 111, 0.5);
+  max-width: 170px;
+  max-height: 170px;
+  margin-right: 16px;
+}
+
+.navi-img {
+  width: 150px;
+  height: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  animation: navi-bounce 2.5s infinite alternate ease-in-out;
+}
