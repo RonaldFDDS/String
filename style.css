@@ -1,76 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
-    --cor-destaque: #3ebd44;
-    --cor-gradiente-preto: linear-gradient(113deg, #000 0%, #1E2021 44.96%, #1E2022 100%);
+    --cor-destaque: #5a7b3f; /* verde musgo */
+    --cor-fundo-caixa: #f6f1e7;
+    --cor-dourado: #bfa76f; /* dourado antigo */
+    --fonte-principal: 'Cinzel Decorative', serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: Montserrat;
+    font-family: var(--fonte-principal);
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 21px 18px 21px;
-    background: var(--cor-gradiente-preto);
+    padding: 16px 21px;
+    background: url('/img/74584-3840x2160-desktop-4k-the-legend-of-zelda-wallpaper-photo.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     flex-direction: column;
 }
-
-
 .container {
     display: flex;
     width: 65rem;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    overflow: hidden;
+    border: 3px solid var(--cor-dourado);
+    border-radius: 16px;
+    padding: 2rem;
+    background-color: rgba(45, 82, 35, 0.397);
 }
 
 h1 {
-    color: var(--cor-destaque);
+    color: var(--cor-dourado);
     text-align: center;
-    font-size: 2.8rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 #entrada-de-texto {
     display: flex;
     height: 12rem;
-    padding: 1.4rem 2.5rem 2.5rem 2.5rem;
+    padding: 1.4rem 2.5rem;
     align-items: flex-start;
     gap: 0.625rem;
     align-self: stretch;
-    border-radius: 0.625rem;
-    background: #FFF;
+    border-radius: 1rem;
+    background: var(--cor-fundo-caixa);
     font-size: 2rem;
+    color: #333;
+    border: 2px solid #ccc;
 }
 
 #entrada-de-texto::placeholder {
-    color: #828282;
-    font-size: 2rem;
+    color: #7a7a7a;
+    font-size: 1.9rem;
     font-weight: 400;
-    line-height: normal;
 }
 
 #botao-palavrachave {
     display: flex;
-    padding: 1.25rem;
+    padding: 1.25rem 2rem;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
-    border-radius: 0.5rem;
-    border: none;
+    border-radius: 0.75rem;
+    border: 2px solid var(--cor-dourado);
     background: var(--cor-destaque);
-    color: #000;
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: normal;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#botao-palavrachave:hover {
+    background: #3d5c2a;
 }
 
 #resultado-palavrachave {
@@ -78,10 +90,13 @@ h1 {
     border-radius: 0.625rem;
     align-self: stretch;
     color: var(--cor-destaque);
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     justify-content: center;
     margin-bottom: 2rem;
     max-width: 100%;
     max-height: 50vh;
     overflow: auto;
+    border: 2px dashed var(--cor-dourado);
+    padding: 1rem;
+    background-color: #f6f1e7;
 }
