@@ -15,7 +15,7 @@ function contaFrequencias(palavras) {
 }
 
 function processaTexto(texto) {
-  let palavras = texto
+  const palavras = texto
     .toLowerCase()
     .normalize("NFD") 
     .replace(/[\u0300-\u036f]/g, "")
@@ -25,9 +25,9 @@ function processaTexto(texto) {
 
   const frequencias = contaFrequencias(palavras);
 
-  return Object.entries(frequencias)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10);
+  const objects = Object.entries(frequencias)
+    .sort((a, b) => b[1] - a[1]);
+  return objects.slice(0,10);
 }
 
 function mostraPalavrasChave() {

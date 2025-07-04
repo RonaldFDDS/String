@@ -87,10 +87,10 @@ h1 {
 
 #resultado-palavrachave {
     display: flex;
-    border-radius: 0.625rem;
+    border-radius: 10px;
     align-self: stretch;
     color: var(--cor-destaque);
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     justify-content: center;
     margin-bottom: 2rem;
     max-width: 100%;
@@ -99,6 +99,7 @@ h1 {
     border: 2px dashed var(--cor-dourado);
     padding: 1rem;
     background-color: #f6f1e7;
+    overflow-y: auto;
 }
 
 .container-resultado {
@@ -111,15 +112,10 @@ h1 {
   border: 2px dashed #bfa76f;
   border-radius: 10px;
   margin-top: 1.5rem;
+  font-size: 1.6rem;
+  flex-wrap: wrap
 }
 
-.navi-img {
-  width: 64px; /* tamanho da Navi */
-  height: auto;
-  user-select: none;
-  pointer-events: none;
-  animation: navi-bounce 2.5s infinite alternate ease-in-out;
-}
 
 /* Pequena animação pra Navi "pulsar" levemente */
 @keyframes navi-bounce {
@@ -131,9 +127,9 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(191, 167, 111, 0.2); /* dourado transparente */
+  background: rgba(191, 167, 111, 0.2); 
   padding: 12px;
-  border-radius: 50%; /* deixa arredondado */
+  border-radius: 50%; 
   box-shadow: 0 0 15px 5px rgba(191, 167, 111, 0.5);
   max-width: 170px;
   max-height: 170px;
@@ -147,6 +143,15 @@ h1 {
   user-select: none;
   pointer-events: none;
   animation: navi-bounce 2.5s infinite alternate ease-in-out;
+}
+
+#resultado-palavrachave {
+  flex: 1; 
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 0.5rem;
+  word-break: break-word;
+  overflow-y: auto;
 }
 
 .creditos {
@@ -164,4 +169,10 @@ h1 {
 .creditos p {
   margin: 0;
   letter-spacing: 1px;
+}
+
+.navi-img {
+  width: 64px;
+  height: auto;
+  flex-shrink: 0;
 }
