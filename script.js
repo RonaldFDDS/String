@@ -56,24 +56,24 @@ const botaoMostraPalavras = document.querySelector('#botao-palavrachave');
 botaoMostraPalavras.addEventListener('click', mostraPalavrasChave);
 
 
-// Função para criar o container com a Navi e o resultado
+
 function criarContainerComNavi() {
   const botao = document.querySelector('#botao-palavrachave');
 
-  // Verifica se o container já existe (para evitar duplicação)
+ 
   if(document.querySelector('.container-resultado')) return;
 
-  // Cria o container
+  
   const container = document.createElement('div');
   container.classList.add('container-resultado');
 
-  // Cria a imagem da Navi
+  
   const naviImg = document.createElement('img');
-  naviImg.src = 'img/imagem_2025-07-02_222315532-removebg-preview.png';  // ajuste o caminho da imagem conforme necessário
+  naviImg.src = 'img/imagem_2025-07-02_222315532-removebg-preview.png';  
   naviImg.alt = 'Navi';
   naviImg.classList.add('navi-img');
 
-  // Pega o elemento resultado e o remove do lugar atual
+  
   const resultado = document.querySelector('#resultado-palavrachave');
   if (!resultado) {
     console.error("Elemento '#resultado-palavrachave' não encontrado.");
@@ -81,14 +81,14 @@ function criarContainerComNavi() {
   }
   resultado.remove();
 
-  // Adiciona a imagem e o resultado dentro do container
+  
   container.appendChild(naviImg);
   container.appendChild(resultado);
 
-  // Insere o container logo após o botão "Extrair"
+
   botao.insertAdjacentElement('afterend', container);
 
-  // Injeta o CSS para o container e a imagem Navi
+  
   const style = document.createElement('style');
   style.textContent = `
     .container-resultado {
